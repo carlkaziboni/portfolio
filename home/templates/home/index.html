@@ -1,0 +1,17 @@
+{% extends "home/layout.html" %}
+{% load vite %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+
+{% vite 'react' %}
+{% vite 'home/index.jsx' 'home/index.css' %}
+
+{% endblock %}
+
+{% block body %}
+  <h1>Welcome to the Home Page</h1>
+  <p>This is the home page of the Vite React Starter template.</p>
+{% endblock %}
+
