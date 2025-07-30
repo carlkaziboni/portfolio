@@ -11,44 +11,43 @@
 {% endblock %}
 
 {% block body %}
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Portfolio</a>
+    <a class="navbar-brand" href="#">Carl's Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#about-me">About Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#About Me">About Me</a>
+          <a class="nav-link" href="#tech-stack">Tech Stack</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tech Stack</a>
+          <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="about-me" id="about-me">
-</div>
+<div class="container-fluid" style="padding-top: 80px;">
+  <div class="section about-me" id="about-me">
+  </div>
 
-<div class="tech-stack" id="tech-stack">
-</div>
+  <div class="section tech-stack" id="tech-stack">
+  </div>
 
-<div class="projects" id="projects">
-</div>
+  <div class="section projects" id="projects">
+  </div>
 
-<div class="contact" id="contact">
+  <div class="section contact" id="contact">
+  </div>
 </div>
 {% endblock %}
 
