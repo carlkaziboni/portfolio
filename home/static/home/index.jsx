@@ -62,12 +62,20 @@ tech_stack.render(
                 <span>Java</span>
             </div>
             <div className="skill-item">
+                <i className="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div className="skill-item">
                 <i className="fab fa-android"></i>
                 <span>Android Studio</span>
             </div>
             <div className="skill-item">
                 <i className="fas fa-code"></i>
                 <span>C/C++</span>
+            </div>
+            <div className="skill-item">
+                <i className="fas fa-microchip"></i>
+                <span>MIPS Assembly</span>
             </div>
             <div className="skill-item">
                 <span style={{fontSize: '1.8rem', fontWeight: 'bold', color: '#667eea'}}>λ</span>
@@ -362,9 +370,9 @@ contact.render(
         <h1>Contact</h1>
         <p>If you would like to get in touch, please feel free to reach out via email or connect with me on social media.</p>
         <ul>
-            <li>📧 <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-            <li>💼 <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></li>
-            <li>🐙 <a href="https://github.com/your-username" target="_blank">GitHub Profile</a></li>
+            <li>📧 <a href="mailto:carlkaziboni@outlook.com">carlkaziboni@outlook.com</a></li>
+            <li>💼 <a href="https://www.linkedin.com/in/carlkaziboni/" target="_blank">LinkedIn Profile</a></li>
+            <li>🐙 <a href="https://github.com/carlkaziboni" target="_blank">GitHub Profile</a></li>
         </ul>
     </div>
 );
