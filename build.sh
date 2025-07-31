@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -o errexit
 
+# Load environment variables from .env file
+if [ -f .env ]; then
+    export $(grep -v '^#' .env | xargs)
+fi
+
 # Upgrade pip to avoid outdated dependency resolution
 pip install --upgrade pip
 
@@ -15,3 +20,6 @@ npm run build
 
 python manage.py collectstatic --no-input
 python manage.py migrate
+
+# Create superuser from environment variables
+python manage.py createsuperuser_env
