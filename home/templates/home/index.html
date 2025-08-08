@@ -1,5 +1,6 @@
 {% extends "home/layout.html" %}
 {% load vite %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
@@ -13,7 +14,10 @@
 {% block body %}
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Carl's Portfolio</a>
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="{% static 'home/icons/carlkaziboniicon.png' %}" alt="Carl Kaziboni" width="32" height="32" class="d-inline-block align-text-top rounded-circle">
+      <span class="visually-hidden">Carl's Portfolio</span>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
