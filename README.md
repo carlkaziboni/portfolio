@@ -162,6 +162,7 @@ The portfolio showcases the following projects:
 8. **X-Ray Detection** - Medical imaging analysis with AI
 9. **Diageo Hackathon** - Competition project for beverage industry
 10. **Android Apps** - Mobile application development
+11. **DRPS Course Stability** - DRPS analysis of course stability and redundancy (entropy + SBERT)
 
 ## 💬 Interactive Features
 

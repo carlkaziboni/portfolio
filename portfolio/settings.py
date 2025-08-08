@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['carlkaziboni.co.uk', 'wwww.carlkaziboni.co.uk']
+ALLOWED_HOSTS = ['carlkaziboni.co.uk', 'wwww.carlkaziboni.co.uk', '127.0.0.1']
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -145,6 +145,6 @@ STATICFILES_DIRS = [
 
 # Vite plugin settings
 DJANGO_VITE_PLUGIN = { 
-    'DEV_MODE': False,
+    'DEV_MODE': True if DEBUG else False,
     'BUILD_DIR': 'build',
 }

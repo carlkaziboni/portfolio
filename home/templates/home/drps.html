@@ -1,0 +1,81 @@
+{% extends 'home/project_layout.html' %}
+
+{% load vite %}
+
+{% block head %}
+{% vite %}
+{% vite 'home/drps.jsx' 'home/drps.css' %}
+
+{% endblock %}
+
+{% block title %}DRPS Course Stability and 'Bloat' Analysis{% endblock %}
+
+{% block project_name %}Course Stability and 'Bloat' for Better Academic Planning{% endblock %}
+
+{% block description %}
+    <div id="drps-description"></div>
+{% endblock %}
+
+{% block technical_deep_dive %}
+    <div id="drps-technical-deep-dive"></div>
+{% endblock %}
+
+{% block reflection_and_learning %}
+    <div id="drps-reflection-and-learning"></div>
+    
+    <div class="project-links">
+        <a href="https://github.com/carlkaziboni/FDSCoursework" class="repo-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+            <span>View Repository</span>
+        </a>
+        <a href="https://github.com/carlkaziboni/FDSCoursework/blob/master/Course_Stability_and__Bloat__for_Better_Academic_Planning.pdf" class="repo-link" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i>
+            <span>View Course Stability Report (PDF)</span>
+        </a>
+    </div>
+{% endblock %}
+
+{% block comment_form_action %}{% url 'home_drps' %}{% endblock %}
+
+{% block form_content %}
+    <div>
+        <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+        <input type="email" 
+               name="{{ form.email.name }}" 
+               id="{{ form.email.id_for_label }}"
+               placeholder="your.email@example.com (optional)"
+               maxlength="320">
+    </div>
+    
+    <div>
+        <label for="{{ form.comment.id_for_label }}">{{ form.comment.label }}</label>
+        <textarea name="{{ form.comment.name }}" 
+                  id="{{ form.comment.id_for_label }}"
+                  placeholder="Share your thoughts about DRPS stability, analytics, or this project..."
+                  maxlength="600" 
+                  required></textarea>
+    </div>
+{% endblock %}
+
+{% block comments %}
+{% if comments %}
+    {% for comment in comments %} 
+    <div class="comment">
+        <div class="comment-meta">
+            <div class="comment-avatar">
+                {{ comment.email|first|upper }}
+            </div>
+            <div>
+                <div class="comment-author">{{ comment.email }}</div>
+                <div class="comment-date">{{ comment.created_at|date:"M d, Y \\a\\t g:i A" }}</div>
+            </div>
+        </div>
+        <p class="comment-content">{{ comment.comment }}</p>
+    </div>
+    {% endfor %}
+{% else %}
+    <div class="no-comments">
+        No comments yet. Share your thoughts on DRPS and course planning!
+    </div>
+{% endif %}
+{% endblock %}

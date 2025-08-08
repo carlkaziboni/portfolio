@@ -1,0 +1,34 @@
+/* DRPS Project Styles - reusing HumanEd theme for consistency */
+@import url('./humaned.css');
+
+/* Minor accent overrides for uniqueness */
+:root {
+    --primary-color: #1d4ed8; /* blue */
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    color: white;
+    background: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.repo-link:hover {
+    transform: translateY(-2px);
+    background: var(--secondary-color);
+}

@@ -13,4 +13,5 @@ urlpatterns = [
     path("xraydetection/", views.xraydetection, name='home_xraydetection'),
     path("diageohack/", views.diageohack, name='home_diageohack'),
     path("android/", views.android, name='home_android'),
+    path("drps/", views.drps, name='home_drps'),
 ]

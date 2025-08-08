@@ -102,7 +102,7 @@ tech_stack.render(
                 <span>SQL</span>
             </div>
             <div className="skill-item">
-                <i className="fas fa-elephant"></i>
+                <i className="devicon-postgresql-plain colored" style={{fontSize: '1.8rem'}}></i>
                 <span>PostgreSQL</span>
             </div>
             <div className="skill-item">
@@ -159,13 +159,14 @@ projects.render(
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
                 </div>
                 
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="project-card">
                             <div className="project-image">
-                                <i className="fas fa-refrigerator"></i>
+                                <i className="fas fa-snowflake"></i>
                             </div>
                             <div className="project-content">
                                 <h5>Smart Fridge Manager</h5>
@@ -344,6 +345,25 @@ projects.render(
                                     <span className="tech-tag">Python</span>
                                 </div>
                                 <a href="/playerposeclassifier" className="project-link">View Project <i className="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div className="carousel-item">
+                        <div className="project-card">
+                            <div className="project-image">
+                                <i className="fas fa-university"></i>
+                            </div>
+                            <div className="project-content">
+                                <h5>DRPS Course Stability &amp; Bloat</h5>
+                                <p>Data-driven analysis of course stability and redundancy at the University of Edinburgh using entropy metrics and SBERT similarity to improve timetabling and planning.</p>
+                                <div className="project-tech">
+                                    <span className="tech-tag">Python</span>
+                                    <span className="tech-tag">SBERT</span>
+                                    <span className="tech-tag">Pandas</span>
+                                    <span className="tech-tag">Seaborn</span>
+                                </div>
+                                <a href="/drps" className="project-link">View Project <i className="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

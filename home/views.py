@@ -15,6 +15,7 @@ mappings = {
     'xraydetection': 7,
     'diageohack': 8,
     'android': 9,
+    'drps': 10,
 }
 
 def index(request):
@@ -141,3 +142,15 @@ def android(request):
     comments = Comments.objects.filter(project=mappings['android']).order_by('-time')
     context = {'form': form, 'comments': comments}
     return render(request, 'home/android.html', context)
+
+def drps(request):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            comment = form.cleaned_data['comment']
+            Comments.objects.create(email=email, comment=comment, project=mappings['drps'])
+    form = CommentForm()
+    comments = Comments.objects.filter(project=mappings['drps']).order_by('-time')
+    context = {'form': form, 'comments': comments}
+    return render(request, 'home/drps.html', context)
