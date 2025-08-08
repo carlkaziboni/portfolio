@@ -817,14 +817,27 @@ body {
   .project-content p {
     font-size: 0.8rem;
   }
-  
-  .tech-tag {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
+}
+
+/* Brand logo image in navbar */
+.brand-logo {
+  height: 52px;         /* larger default */
+  width: auto;          /* keep aspect ratio */
+  max-height: 52px;
+  object-fit: contain;  /* no distortion */
+  display: inline-block;
+}
+
+@media (max-width: 992px) {
+  .brand-logo {
+    height: 46px;
+    max-height: 46px;
   }
-  
-  .project-link {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .brand-logo {
+    height: 40px;
+    max-height: 40px;
   }
 }
