@@ -14,4 +14,5 @@ urlpatterns = [
     path("diageohack/", views.diageohack, name='home_diageohack'),
     path("android/", views.android, name='home_android'),
     path("drps/", views.drps, name='home_drps'),
+    path("learnrl/", views.learnrl, name='home_learnrl'),
 ]

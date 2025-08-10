@@ -255,6 +255,25 @@ projects.render(
                         </div>
                     </div>
                     
+                    {/* New LearnRL Project */}
+                    <div className="carousel-item">
+                        <div className="project-card">
+                            <div className="project-image">
+                                <i className="fas fa-robot"></i>
+                            </div>
+                            <div className="project-content">
+                                <h5>LearnRL – Hugging Face Deep RL Course</h5>
+                                <p>Completed end-to-end Deep RL curriculum: PPO, DQN, A2C, REINFORCE, and Multi-Agent RL across classic control, Atari, robotics, VizDoom, and Unity ML-Agents with models published on Hugging Face Hub.</p>
+                                <div className="project-tech">
+                                    <span className="tech-tag">Stable-Baselines3</span>
+                                    <span className="tech-tag">Gymnasium</span>
+                                    <span className="tech-tag">PyTorch</span>
+                                </div>
+                                <a href="/learnrl" className="project-link">View Project <i className="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div className="carousel-item">
                         <div className="project-card">
                             <div className="project-image">

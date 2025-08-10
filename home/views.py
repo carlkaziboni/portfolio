@@ -16,6 +16,7 @@ mappings = {
     'diageohack': 8,
     'android': 9,
     'drps': 10,
+    'learnrl': 11,  # add learnrl mapping
 }
 
 def index(request):
@@ -154,3 +155,15 @@ def drps(request):
     comments = Comments.objects.filter(project=mappings['drps']).order_by('-time')
     context = {'form': form, 'comments': comments}
     return render(request, 'home/drps.html', context)
+
+def learnrl(request):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            comment = form.cleaned_data['comment']
+            Comments.objects.create(email=email, comment=comment, project=mappings['learnrl'])
+    form = CommentForm()
+    comments = Comments.objects.filter(project=mappings['learnrl']).order_by('-time')
+    context = {'form': form, 'comments': comments}
+    return render(request, 'home/learnrl.html', context)

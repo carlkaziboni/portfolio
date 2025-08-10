@@ -1,0 +1,15 @@
+/* LearnRL Page Styles - reuse HumanEd theme */
+@import url('./humaned.css');
+
+/* Minor overrides for code blocks */
+.code-block {
+    background: #0b2a2a;
+    color: #e0fffb;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
