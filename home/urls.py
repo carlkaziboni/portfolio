@@ -15,4 +15,5 @@ urlpatterns = [
     path("android/", views.android, name='home_android'),
     path("drps/", views.drps, name='home_drps'),
     path("learnrl/", views.learnrl, name='home_learnrl'),
+    path("f1analysis/", views.f1analysis, name='home_f1analysis'),  # new F1Analysis URL
 ]

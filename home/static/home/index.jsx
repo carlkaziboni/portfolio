@@ -160,6 +160,7 @@ projects.render(
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button> {/* F1Analysis */}
                 </div>
                 
                 <div className="carousel-inner">
@@ -386,6 +387,25 @@ projects.render(
                             </div>
                         </div>
                     </div>
+                    
+                    <div className="carousel-item">
+                        <div className="project-card">
+                            <div className="project-image">
+                                <i className="fas fa-flag-checkered"></i>
+                            </div>
+                            <div className="project-content">
+                                <h5>F1Analysis - Formula 1 Data Analytics</h5>
+                                <p>Comprehensive F1 telemetry + timing analytics platform with stint degradation modeling, strategy simulation, and driver pace profiling across seasons.</p>
+                                <div className="project-tech">
+                                    <span className="tech-tag">Python</span>
+                                    <span className="tech-tag">Pandas</span>
+                                    <span className="tech-tag">FastF1</span>
+                                    <span className="tech-tag">Plotly</span>
+                                </div>
+                                <a href="/f1analysis" className="project-link">View Project <i className="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <button className="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
@@ -399,7 +419,7 @@ projects.render(
             </div>
         </div>
         
-        <p className="projects-footer">Each of these 10 projects represents a unique challenge and demonstrates my passion for creating innovative solutions that make a real impact in technology and AI.</p>
+        <p className="projects-footer">Each of these 11 projects represents a unique challenge and demonstrates my passion for creating innovative solutions that make a real impact in technology and AI.</p>
     </div>
 );
 
