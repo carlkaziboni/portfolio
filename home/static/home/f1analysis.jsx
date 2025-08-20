@@ -66,12 +66,20 @@ reflection.render(
     <div className="slide-in-right">
         <h3>Reflection & Learning</h3>
         <ul className="learning-list">
-            <li>Built robust data alignment logic for merging telemetry, lap, and event streams.</li>
-            <li>Explored modelling of tyre degradation vs stint length using polynomial + piecewise fits.</li>
-            <li>Learned trade-offs between raw pace and stint longevity in strategic modeling.</li>
-            <li>Enhanced dashboard UX for comparative multi-driver overlays.</li>
-            <li>Future: machine learning classification of optimal pit strategies under dynamic safety car probability.</li>
+            <li>Built robust data alignment logic for merging telemetry, lap, and event streams from multiple F1 data sources</li>
+            <li>Explored advanced modelling of tyre degradation vs stint length using polynomial and piecewise regression fits</li>
+            <li>Learned critical trade-offs between raw pace and stint longevity in strategic pit window modeling</li>
+            <li>Enhanced interactive dashboard UX for comparative multi-driver performance overlays and telemetry visualization</li>
+            <li>Developed imitation learning pipeline to capture and compare elite driver throttle/brake styles with behavior cloning</li>
+            <li>Future work: machine learning classification of optimal pit strategies under dynamic safety car probability scenarios</li>
         </ul>
-        <p>F1Analysis bridges passion for motorsport with data engineering and analytical modelling, showcasing domain-specific feature extraction and interactive storytelling.</p>
+        <p>F1Analysis bridges passion for motorsport with advanced data engineering and analytical modelling, showcasing domain-specific feature extraction, interactive storytelling, and the exciting intersection of AI and racing telemetry data.</p>
+        
+        <div className="project-links">
+            <a href="https://github.com/carlkaziboni/F1Analysis" className="repo-link" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github"></i>
+                <span>View F1Analysis Repository</span>
+            </a>
+        </div>
     </div>
 );
