@@ -17,7 +17,8 @@ description.render(
             <li>Deliver interactive dashboards for storytelling and data exploration</li>
         </ul>
         <h3>Repository Structure</h3>
-        <pre className="code-block">F1Analysis/
+        <pre className="code-block">
+F1Analysis/
 ├── app.py                      # Streamlit F1 dashboard
 ├── OpenF1Explore.ipynb         # Data exploration & API probing
 ├── imitationlearning/
@@ -50,7 +51,8 @@ technical.render(
             <li><strong>Tech Stack:</strong> Python, Pandas, NumPy, fastf1/OpenF1, Plotly, Scikit-learn, Streamlit, Gymnasium.</li>
         </ul>
         <h3>Sample Installation</h3>
-        <pre className="code-block">git clone https://github.com/carlkaziboni/F1Analysis.git
+        <pre className="code-block">
+git clone https://github.com/carlkaziboni/F1Analysis.git
 cd F1Analysis
 python -m venv f1_env
 source f1_env/bin/activate
