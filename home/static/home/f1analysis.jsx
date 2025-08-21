@@ -5,16 +5,21 @@ const description = createRoot(document.getElementById('f1analysis-description')
 description.render(
     <div className="fade-in">
         <h2>F1Analysis 🏎️📊</h2>
-        <p>F1Analysis is a Formula 1 data analytics platform that ingests timing, telemetry, and race event data to produce insightful visualizations and performance breakdowns across drivers, teams, and seasons. It enables comparative lap analysis, stint degradation modeling, pit strategy evaluation, sector pace profiling, and emerging imitation learning experiments on driver style.</p>
-        <p><strong>Repository:</strong> <a href="https://github.com/carlkaziboni/F1Analysis" target="_blank" rel="noopener noreferrer">github.com/carlkaziboni/F1Analysis</a></p>
-        <h3>Objectives</h3>
+        <p>A comprehensive Formula 1 telemetry analysis project that evolved from exploring race data visualizations to creating machine learning models that compare driving styles between Lewis Hamilton and Charles Leclerc. What started as curiosity about F1 telemetry data during the summer break turned into a deep dive into behavioral cloning and driver style analysis.</p>
+        <h3>Project Journey</h3>
         <ul className="tech-list">
-            <li>Standardize ingestion of multi-season F1 data (OpenF1 / ergast / telemetry exports)</li>
-            <li>Generate multi-dimensional performance metrics (pace delta, tyre wear, degradation curves)</li>
-            <li>Provide comparative driver analytics (qualifying vs race pace, consistency, tyre stint efficiency)</li>
-            <li>Model pit stop strategy alternatives and undercut/overcut deltas</li>
-            <li>Explore imitation learning of elite driver styles (e.g. Leclerc vs Hamilton)</li>
-            <li>Deliver interactive dashboards for storytelling and data exploration</li>
+            <li><strong>Phase 1:</strong> Built interactive F1 dashboard analyzing Monaco GP 2025 telemetry data</li>
+            <li><strong>Phase 2:</strong> Developed behavioral cloning models to learn and compare elite driver styles</li>
+            <li><strong>Core Analysis:</strong> Used throttle, brake, gear, RPM, DRS, and position data to understand driving patterns</li>
+            <li><strong>Key Results:</strong> Successfully captured unique characteristics - Leclerc's aggressive throttle vs Hamilton's strategic braking</li>
+        </ul>
+        <h3>Technical Implementation</h3>
+        <ul className="tech-list">
+            <li>Custom Gymnasium environment using Monaco GP 2025 real telemetry data (~18,000 records per driver)</li>
+            <li>6-dimensional observation space: DRS, RPM, Speed, X/Y/Z positions</li>
+            <li>3-dimensional action space: Throttle, Brake, Gear control</li>
+            <li>Behavioral cloning with PyTorch achieving high correlation with expert demonstrations</li>
+            <li>Interactive Streamlit dashboard for comprehensive F1 data exploration across sessions</li>
         </ul>
         <h3>Repository Structure</h3>
         <pre className="code-block">
@@ -41,14 +46,20 @@ technical.render(
     <div className="slide-in-left">
         <h3>Technical Deep Dive</h3>
         <ul className="feature-list">
-            <li><strong>Data Sources:</strong> OpenF1 / fastf1 API for session & telemetry; ergast for historical results; custom CSV ingestion for supplemental timing.</li>
-            <li><strong>Storage:</strong> Layered cache (fastf1 local cache + structured data frames / future relational store for sessions, laps, stints, pit events).</li>
-            <li><strong>Feature Engineering:</strong> Lap pace normalization (tyre compound, fuel load), stint degradation polynomial/regression fitting, sector time variance metrics.</li>
-            <li><strong>Strategy Modeling:</strong> Simulated race deltas under alternate pit laps using degradation + pit loss models.</li>
-            <li><strong>Visualization:</strong> Interactive pace traces, tyre wear curves, delta overlays, box plots for consistency, rain impact overlays.</li>
-            <li><strong>Architecture:</strong> Modular pipeline: ingest -&gt; transform -&gt; feature -&gt; model -&gt; visualize -&gt; dashboard.</li>
-            <li><strong>Imitation Learning:</strong> Custom Gymnasium environment + behavior cloning to compare Hamilton vs Leclerc throttle/brake style, producing comparative style embeddings and plots.</li>
-            <li><strong>Tech Stack:</strong> Python, Pandas, NumPy, fastf1/OpenF1, Plotly, Scikit-learn, Streamlit, Gymnasium.</li>
+            <li><strong>Data Sources:</strong> OpenF1 API for Monaco GP 2025 session telemetry - throttle, brake, gear, RPM, DRS status, and car positions</li>
+            <li><strong>Data Processing:</strong> ~18,000 telemetry records per driver after cleaning with 150ms tolerance merge between car and location data streams</li>
+            <li><strong>Machine Learning:</strong> Behavioral cloning using imitation library with PyTorch backend to replicate expert driving demonstrations</li>
+            <li><strong>Environment Design:</strong> Custom Gymnasium environment with 6D observation space (DRS, RPM, Speed, X/Y/Z) and 3D action space (Throttle, Brake, Gear)</li>
+            <li><strong>Model Training:</strong> Dual model approach - separate training for Hamilton and Leclerc driving styles with 50 epochs each</li>
+            <li><strong>Performance Metrics:</strong> Leclerc model achieved 11.782 throttle MAE, Hamilton model 13.709 MAE with high expert correlation</li>
+            <li><strong>Visualization:</strong> Comprehensive matplotlib-based comparisons showing action distributions, racing lines, and statistical analysis</li>
+            <li><strong>Dashboard:</strong> Interactive Streamlit application for real-time F1 data exploration and session analysis</li>
+        </ul>
+        <h3>Key Findings</h3>
+        <ul className="feature-list">
+            <li><strong>Leclerc Style:</strong> More aggressive throttle application (+0.5%), higher average speeds, 73 gear changes per 500 simulation steps</li>
+            <li><strong>Hamilton Style:</strong> Strategic braking patterns (+2.9% heavier), smoother control inputs, 85 gear changes showing more tactical approach</li>
+            <li><strong>Monaco Focus:</strong> Circuit chosen for technical complexity demanding precise car control and amplifying driver style differences</li>
         </ul>
         <h3>Sample Installation</h3>
         <pre className="code-block">
@@ -68,14 +79,15 @@ reflection.render(
     <div className="slide-in-right">
         <h3>Reflection & Learning</h3>
         <ul className="learning-list">
-            <li>Built robust data alignment logic for merging telemetry, lap, and event streams from multiple F1 data sources</li>
-            <li>Explored advanced modelling of tyre degradation vs stint length using polynomial and piecewise regression fits</li>
-            <li>Learned critical trade-offs between raw pace and stint longevity in strategic pit window modeling</li>
-            <li>Enhanced interactive dashboard UX for comparative multi-driver performance overlays and telemetry visualization</li>
-            <li>Developed imitation learning pipeline to capture and compare elite driver throttle/brake styles with behavior cloning</li>
-            <li>Future work: machine learning classification of optimal pit strategies under dynamic safety car probability scenarios</li>
+            <li>Successfully implemented behavioral cloning from real F1 telemetry data, capturing subtle differences in world-class driving techniques</li>
+            <li>Mastered data pipeline challenges - merging car telemetry (throttle, brake, gear, RPM, DRS) with position data streams from OpenF1 API</li>
+            <li>Developed deep understanding of Monaco GP characteristics and why this technical circuit amplifies driver style differences</li>
+            <li>Created custom Gymnasium environment translating real-world F1 data into reinforcement learning problem space</li>
+            <li>Learned to quantify and visualize the "art" of F1 racing through machine learning model comparisons</li>
+            <li>Built comprehensive analysis showing Leclerc's aggressive throttle style vs Hamilton's strategic braking and gear management</li>
+            <li>Future work: Multi-track analysis, real-time strategy prediction, and expanded telemetry data integration</li>
         </ul>
-        <p>F1Analysis bridges passion for motorsport with advanced data engineering and analytical modelling, showcasing domain-specific feature extraction, interactive storytelling, and the exciting intersection of AI and racing telemetry data.</p>
+        <p>This summer break project evolved from curiosity about F1 data into a sophisticated AI-driven analysis tool. By combining modern machine learning with real telemetry data, it demonstrates how AI can understand and replicate human expertise in complex, high-performance domains like Formula 1 racing.</p>
         
         <div className="project-links">
             <a href="https://github.com/carlkaziboni/F1Analysis" className="repo-link" target="_blank" rel="noopener noreferrer">

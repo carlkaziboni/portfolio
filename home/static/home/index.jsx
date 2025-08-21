@@ -394,13 +394,13 @@ projects.render(
                                 <i className="fas fa-flag-checkered"></i>
                             </div>
                             <div className="project-content">
-                                <h5>F1Analysis - Formula 1 Data Analytics</h5>
-                                <p>Comprehensive F1 telemetry + timing analytics platform with stint degradation modeling, strategy simulation, and driver pace profiling across seasons.</p>
+                                <h5>F1Analysis - AI-Driven Driver Comparison</h5>
+                                <p>Behavioral cloning models trained on Monaco GP 2025 telemetry to compare Lewis Hamilton and Charles Leclerc driving styles. Features custom Gymnasium environment and comprehensive style analysis.</p>
                                 <div className="project-tech">
-                                    <span className="tech-tag">Python</span>
-                                    <span className="tech-tag">Pandas</span>
-                                    <span className="tech-tag">FastF1</span>
-                                    <span className="tech-tag">Plotly</span>
+                                    <span className="tech-tag">PyTorch</span>
+                                    <span className="tech-tag">Gymnasium</span>
+                                    <span className="tech-tag">OpenF1</span>
+                                    <span className="tech-tag">Behavioral Cloning</span>
                                 </div>
                                 <a href="/f1analysis" className="project-link">View Project <i className="fas fa-arrow-right"></i></a>
                             </div>
