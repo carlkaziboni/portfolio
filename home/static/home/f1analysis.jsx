@@ -94,6 +94,10 @@ reflection.render(
                 <i className="fab fa-github"></i>
                 <span>View F1Analysis Repository</span>
             </a>
+            <a href="https://f1analysis-dvahfrlcfjew3cwgun7j7k.streamlit.app/" className="repo-link" target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-external-link-alt"></i>
+                <span>Live Streamlit Dashboard</span>
+            </a>
         </div>
     </div>
 );
